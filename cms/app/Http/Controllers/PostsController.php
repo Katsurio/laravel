@@ -13,9 +13,12 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id, $student, $course, $grade)
     {
         //
+
+
+        return 'id is: '. $id . ', student is '. $student . ', course is '. $course . ', grade is '. $grade;
     }
 
     /**
@@ -48,6 +51,8 @@ class PostsController extends Controller
     public function show($id)
     {
         //
+
+        return "This is the show method, yayyyyyyy";
     }
 
     /**
