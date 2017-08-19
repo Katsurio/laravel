@@ -11,11 +11,11 @@
 |
 */
 
-//Route::get('/', function () {
-//
-//    return view('welcome');
-//
-//});
+Route::get('/', function () {
+
+    return view('welcome');
+
+});
 //
 //
 //Route::get('/about', function () {
@@ -25,11 +25,7 @@
 //});
 //
 //
-//Route::get('/contact', function () {
-//
-//    return "Yo, contact me";
-//
-//});
+Route::get('/contact', 'PostsController@contact');
 //
 //
 //Route::get('/post/{id}/{name}', function($id, $name){
@@ -51,4 +47,6 @@
 //Route::get('/post/{id}/{student}/{course}/{grade}', 'PostsController@index');
 
 
-Route::resource('post/{id}/{student}/{course}/{grade}', 'PostsController');
+//Route::resource('post/{id}/{student}/{course}/{grade}', 'PostsController');
+
+Route::get('/post/{id}/{name}/{course}/{grade}', 'PostsController@show_post');

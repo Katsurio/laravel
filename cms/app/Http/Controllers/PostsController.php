@@ -18,7 +18,7 @@ class PostsController extends Controller
         //
 
 
-        return 'id is: '. $id . ', student is '. $student . ', course is '. $course . ', grade is '. $grade;
+        return "id is: ". $id . ", student is ". $student . ", course is ". $course . ", grade is ". $grade;
     }
 
     /**
@@ -87,5 +87,18 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function contact()
+    {
+        return view('contact');
+
+    }
+
+    public function show_post($id, $name, $course, $grade)
+    {
+//        return view('post')->with('id', $id)->with('name', $name)->with('course', $course)->with('grade', $grade);
+        return view('post', compact('id', 'name', 'course', 'grade'));
     }
 }
